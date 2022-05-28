@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python -m py_compile myapp.py'
+                bat 'python -m py_compile myapp.py'
                 stash(name: 'compiled-results', includes: '*.py*')
             }
         }
