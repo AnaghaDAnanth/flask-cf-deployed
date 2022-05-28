@@ -3,10 +3,10 @@
 Hi there!
 Adding a new line
 
-Deploying Flaska application on CF
+Deploying Flask application on CF
 https://blogs.sap.com/2018/12/12/create-simple-flask-rest-api-using-cloud-foundry/
 
-Github actions for CD
+Github actions for CD on BTP/CF
 https://www.starkandwayne.com/blog/deploying-cf-applications-via-github-actions/
 
 Installing Jenkins on Docker
