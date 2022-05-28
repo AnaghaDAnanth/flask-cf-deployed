@@ -14,6 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: display
+    if: always()
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to Cloud Foundry
