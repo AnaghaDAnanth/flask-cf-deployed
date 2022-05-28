@@ -16,5 +16,6 @@ pipeline {
                     sh('git push https://${AnaghaDAnanth}:${devops9931}@flask-cf-deployed.git  --tags -f --no-verify')
                 }
             }
+        }
     }
 }
