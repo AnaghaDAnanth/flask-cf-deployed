@@ -19,3 +19,6 @@ https://www.youtube.com/watch?v=kW_bADC2fFM
 
 Trigerring automatic builds to Jenkins
 https://www.youtube.com/watch?v=adVWQc8T9qg
+
+Changing order of github actions
+https://www.youtube.com/watch?v=JNqButrPjcE
