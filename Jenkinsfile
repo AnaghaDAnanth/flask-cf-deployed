@@ -12,7 +12,7 @@ pipeline {
         
         stage('Publish') {
             steps {
-                 {
+                 
                    bat('git push https://github.com/AnaghaDAnanth/flask-cf-deployed.git')
                 }
             }
