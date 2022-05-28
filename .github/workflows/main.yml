@@ -4,8 +4,16 @@ on:
     branches: [main]
 
 jobs:
+
+  display:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a value
+        run: echo Hello from first job 
+
   deploy:
     runs-on: ubuntu-latest
+    needs: display
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to Cloud Foundry
