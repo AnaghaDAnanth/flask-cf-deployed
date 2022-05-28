@@ -13,7 +13,7 @@ pipeline {
         stage('Publish') {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'anagha-creds', usernameVariable: 'AnaghaDAnanth', passwordVariable: 'devops9931']]) {
-                    bat('git push https://${AnaghaDAnanth}:${devops9931}@flask-cf-deployed.git  --tags -f --no-verify')
+                    bat('git push https://${AnaghaDAnanth}:${devops9931}@github.com/AnaghaDAnanth/flask-cf-deployed.git  --tags -f --no-verify')
                 }
             }
         }
