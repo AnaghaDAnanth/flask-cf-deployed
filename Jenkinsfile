@@ -9,5 +9,12 @@ pipeline {
                 stash(name: 'compiled-results', includes: '*.py*')
             }
         }
+        
+        stage('Publish') {
+            steps {
+                 {
+                   bat('git push https://github.com/AnaghaDAnanth/flask-cf-deployed.git')
+                }
+            }
     }
 }
