@@ -31,19 +31,13 @@ pipeline {
             steps{
                   bat 'python -m py_compile Selenium.py'
             }
-            post {
-          always {
-            script {
-              allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'target/allure-results']]
-              ])
-            }
-          }
+            
+             post {
+        always {
+        
+            junit 'build/reports/**/*.xml'
         }
+    }
         }
 
         stage('SonarQube analysis') {
@@ -59,3 +53,4 @@ pipeline {
         }
     }
 }
+
