@@ -1,3 +1,4 @@
+import pytest
 from myapp import app
 
 
