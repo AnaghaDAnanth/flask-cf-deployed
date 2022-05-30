@@ -26,6 +26,12 @@ pipeline {
                 bat 'python -m py_compile test_app.py'
             }
         }
+        
+        stage("PyTest") {
+            steps{
+                  bat 'python -m py_compile Selenium.py'
+            }
+        }
 
         stage('SonarQube analysis') {
 
