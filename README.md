@@ -22,3 +22,7 @@ https://www.youtube.com/watch?v=adVWQc8T9qg
 
 Changing order of github actions
 https://www.youtube.com/watch?v=JNqButrPjcE
+
+Integrating SonarQube with Jenkins
+https://www.youtube.com/watch?v=Spzk1lrCgNY
+https://www.youtube.com/watch?v=wn9wWYAShag
