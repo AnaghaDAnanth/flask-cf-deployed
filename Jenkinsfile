@@ -22,7 +22,8 @@ pipeline {
 
         stage("PyTest") {
             steps{
-                bat 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && python test_app.py'
+                bat 'pip install --user -r requirements.txt'
+                bat 'python test_app.py'
             }
         }
 
