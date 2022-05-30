@@ -22,8 +22,8 @@ pipeline {
 
         stage("Py Test") {
             steps{
-                //bat 'pip install --user -r requirements.txt'
-                bat 'pip3 install -U pytest'
+                bat 'pip3 install --user -r requirements.txt'
+                //bat 'pip3 install -U pytest'
                 bat 'py.test test_app.py'
             }
         }
