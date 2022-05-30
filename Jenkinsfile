@@ -22,7 +22,7 @@ pipeline {
 
         stage("PyTest") {
             steps{
-                bat 'pytest test_app.py'
+                bat 'python test_app.py'
             }
         }
 
