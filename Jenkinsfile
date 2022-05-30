@@ -21,12 +21,13 @@ pipeline {
         }
 
         stage('SonarQube analysis') {
-            steps{
-            // requires SonarQube Scanner 2.8+
-            def scannerHome = tool 'SonarqubeScanner-4.7';
-            withSonarQubeEnv('Sonarqube') 
-                {
-                bat "${scannerHome}/bin/sonar-scanner.bat"
+
+        steps {
+                script {
+                    scannerHome = tool 'SonarqubeScanner-4.7';
+                }
+                withSonarQubeEnv('Sonarqube') {
+                    bat "${scannerHome}/bin/sonar-scanner.bat" 
                 }
             }
         }
