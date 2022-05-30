@@ -20,17 +20,30 @@ pipeline {
             }
         }
 
-        stage("Selenium Test") {
+        stage("Py Test") {
             steps{
                 bat 'pip install --user -r requirements.txt'
                 bat 'python -m py_compile test_app.py'
             }
         }
         
-        stage("PyTest") {
+        stage("Selenium Test") {
             steps{
                   bat 'python -m py_compile Selenium.py'
             }
+            post {
+          always {
+            script {
+              allure([
+                includeProperties: false,
+                jdk: '',
+                properties: [],
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'target/allure-results']]
+              ])
+            }
+          }
+        }
         }
 
         stage('SonarQube analysis') {
