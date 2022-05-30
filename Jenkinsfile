@@ -21,13 +21,13 @@ pipeline {
         }
 
         stage('SonarQube analysis') {
-        steps{
-        withSonarQubeEnv('Sonarqube') { 
-        // If you have configured more than one global server connection, you can specify its name
-//      bat("${scannerHome}/bin/sonar-scanner")
-        bat("mvn sonar:sonar")
-        }
-        }
+        
+            // requires SonarQube Scanner 2.8+
+            def scannerHome = tool 'SonarqubeScanner-4.7';
+            withSonarQubeEnv('Sonarqube') 
+            {
+            bat "${scannerHome}/bin/sonar-scanner.bat"
+            }
         }
     }
 }
