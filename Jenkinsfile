@@ -22,7 +22,6 @@ pipeline {
 
         stage("PyTest") {
             steps{
-                bat 'pip install pytest'
                 bat 'pytest test_app.py'
             }
         }
