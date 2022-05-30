@@ -23,13 +23,7 @@ pipeline {
         stage("Py Test") {
             steps{
                 
-                bat('PYENV_HOME=$WORKSPACE/.pyenv/
-                    virtualenv --no-site-packages $PYENV_HOME
-                    source $PYENV_HOME/bin/activate
-                    pip install -U pytest
-                    pip install -r requirements.txt
-                    py.test test_app.py 
-                    deactivate')
+                bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 
                 
                 //bat 'python -m pip install –upgrade pip'
