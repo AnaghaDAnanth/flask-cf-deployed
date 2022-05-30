@@ -24,7 +24,7 @@ pipeline {
             steps{
                 //bat 'pip install --user -r requirements.txt'
                 //bat 'pip install -U pytest'
-                bat 'pytest test_app.py'
+                withPythonEnv('python3') { bat 'py.test test_app.py'}
             }
         }
         
