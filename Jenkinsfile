@@ -23,7 +23,7 @@ pipeline {
         stage("PyTest") {
             steps{
                 bat 'pip install --user -r requirements.txt'
-                bat 'python test_app.py'
+                bat 'python -m py_compile test_app.py'
             }
         }
 
