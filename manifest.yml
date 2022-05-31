@@ -2,5 +2,5 @@
 applications:
 - name: app.py
   memory: 128MB
-  disk_quota: 256MB
+  disk_quota: 1G
   random-route: true
