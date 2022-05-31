@@ -25,6 +25,8 @@ pipeline {
                 
                 //bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 //bat 'pytest --junitxml results.xml test_app.py'
+                
+                bat 'pip install -r requirements.txt'
                 bat 'python -m pytest --junitxml results.xml test_routes.py'
                 
                 //bat 'python -m pip install –upgrade pip'
