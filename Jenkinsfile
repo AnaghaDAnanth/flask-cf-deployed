@@ -20,18 +20,18 @@ pipeline {
             }
         }
 
-        stage("Py Test") {
-            steps{
+//         stage("Py Test") {
+//             steps{
                 
-                bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
+//                 bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 
                 
-                //bat 'python -m pip install –upgrade pip'
-                //bat 'pip3 install --user -r requirements.txt'
-                //bat 'pip3 install -U pytest'
-                //bat 'py.test test_app.py'
-            }
-        }
+//                 //bat 'python -m pip install –upgrade pip'
+//                 //bat 'pip3 install --user -r requirements.txt'
+//                 //bat 'pip3 install -U pytest'
+//                 //bat 'py.test test_app.py'
+//             }
+//         }
         
         stage('Python pytest Tests') {
             steps{
