@@ -1,4 +1,0 @@
-Flask
-pytest
-py
-selenium
