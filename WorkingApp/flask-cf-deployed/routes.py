@@ -1,0 +1,24 @@
+import os
+from flask import Flask, render_template
+app = Flask(__name__)
+
+def configure_routes(app):
+
+    @app.route('/')
+    def hello():
+        return render_template('index.html')
+
+    @app.route('/hello/<name>')
+    def hello_name(name):
+        # Load current count
+        f = open("count.txt", "r")
+        count = int(f.read())
+        f.close()
+        # Increment the count
+        count += 1
+        # Overwrite the count
+        f = open("count.txt", "w")
+        f.write(str(count))
+        f.close()
+
+        return render_template('hello.html', name=name, count=count)
