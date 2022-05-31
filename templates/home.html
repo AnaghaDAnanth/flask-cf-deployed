@@ -1,0 +1,109 @@
+
+<html>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+      <title>Home Page</title>
+      
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mystyle.css') }}">
+    </head>
+    <body>
+    
+    
+      <div class="heading">Devops Project : Sentiment Analysis On Restaurant Reviews</div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       
+      <div class = "abouttext">
+        <pre><b>  Project Members</b><br><br></pre>
+        <pre>  Neha Thipse       (2021sp93056)</pre> 
+        <pre>  Anagha D Ananth   (2021sp93053)</pre>
+        <pre>  Natasha Sheelvant (2021sp93033)</pre>
+        <pre>  Archana           (2021sp93081)</pre>
+        
+       </div>
+    
+    
+      </div>
+    
+    <center><fieldset>
+     <form action="" method="POST" autocomplete="off">
+    
+    Enter your name:<br><br>
+    <input id="idName" type="text" name="name" size="35" required><br><br>
+            
+    Enter review:<br><br>
+    <textarea id="idReview" rows = "3" cols = "35" name = "review"  required="required"></textarea><br><br>
+    <div class="btn"><input id="idSubmit" type="submit" value=" Submit " name="submit"></div>
+         
+         
+    </form>
+    </fieldset></center>
+    
+    
+    
+    {% if h %}
+    
+      {% if op %}
+          <div class="positive">
+      {% else %}
+              <div class="negative">
+      {% endif %}
+          <table>
+              <tr>
+                 {% if  op %}
+                  <td rowspan="2"><div class="emo">😄</div></td>
+                  <td><div class ="pn"> POSITIVE!!</div></td>
+                  {% else %}
+                  <td rowspan="2"><div class="emo">🙁</div></td>
+                  <td><div class ="pn">NEGATIVE!!</div></td>
+                  {% endif %}
+              </tr>
+              
+              <tr>
+                  <td>
+                      <div class="uname">
+                          {{name}}<br>
+                      </div>
+                      {{review}}
+                  </td>
+                 
+              </tr>
+              
+    
+          </table>
+      </div>
+    {% endif %}
+    
+    <br>
+    <br>
+    
+    <script>
+      if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+      function openTab(evt, tab_name) {
+        var i, tabcontent, tablinks;
+        closeNav()
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tab_name).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "450px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    </body>
+    </html>   
