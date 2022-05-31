@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python -m py_compile myapp.py'
+                bat 'python -m py_compile app.py'
                 stash(name: 'compiled-results', includes: '*.py*')
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                 
                 //bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 //bat 'pytest --junitxml results.xml test_app.py'
-                bat 'python -m pytest --junitxml results.xml test_app.py'
+                bat 'python -m pytest --junitxml results.xml test_routes.py'
                 
                 //bat 'python -m pip install –upgrade pip'
                 //bat 'pip3 install --user -r requirements.txt'
