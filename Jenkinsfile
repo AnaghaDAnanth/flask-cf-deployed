@@ -35,7 +35,7 @@ pipeline {
         
         stage('Python pytest Tests') {
             steps{
-                bat 'virtualenv -p /usr/bin/python3 venv'
+                
                 bat 'pip install -r requirements.txt'
                 bat 'pytest --junit-xml=test_results.xml test || true'
                 junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
