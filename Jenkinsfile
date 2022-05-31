@@ -20,27 +20,27 @@ pipeline {
             }
         }
 
-//         stage("Py Test") {
-//             steps{
-                
-//                 bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
-                
-                
-//                 //bat 'python -m pip install –upgrade pip'
-//                 //bat 'pip3 install --user -r requirements.txt'
-//                 //bat 'pip3 install -U pytest'
-//                 //bat 'py.test test_app.py'
-//             }
-//         }
-        
-        stage('Python pytest Tests') {
+        stage("Py Test") {
             steps{
                 
-                bat 'pip install -r requirements.txt'
-                bat 'pytest --junit-xml=test_results.xml test || true'
-                junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
+                //bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
+                bat 'py.test --junitxml results.xml test_app.py'
+                
+                //bat 'python -m pip install –upgrade pip'
+                //bat 'pip3 install --user -r requirements.txt'
+                //bat 'pip3 install -U pytest'
+                //bat 'py.test test_app.py'
             }
         }
+        
+//         stage('Python pytest Tests') {
+//             steps{
+                
+//                 bat 'pip install -r requirements.txt'
+//                 bat 'pytest --junit-xml=test_results.xml test || true'
+//                 junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
+//             }
+//         }
         
         
 //         stage("Selenium Test") {
