@@ -1,6 +1,6 @@
 ---
 applications:
-- name: myapp.py
+- name: app.py
   memory: 128MB
   disk_quota: 256MB
   random-route: true
