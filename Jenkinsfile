@@ -33,18 +33,28 @@ pipeline {
             }
         }
         
-        stage("Selenium Test") {
-            steps{
-                  bat 'python -m py_compile Selenium.py'
-            }
-            
-             post {
-        always {
+        stage('Python pytest Tests') {
+           
+                sh 'virtualenv -p /usr/bin/python3 venv'
+                sh 'source venv/bin/activate && pip install -r requirements.txt'
+                sh 'source venv/bin/activate && pytest --junit-xml=test_results.xml test || true'
+                junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
+           
+        }
         
-            junit 'build/reports/**/*.xml'
-        }
-    }
-        }
+        
+//         stage("Selenium Test") {
+//             steps{
+//                   bat 'python -m py_compile Selenium.py'
+//             }
+            
+//              post {
+//         always {
+        
+//             junit 'build/reports/**/*.xml'
+//         }
+//     }
+//         }
 
         stage('SonarQube analysis') {
 
