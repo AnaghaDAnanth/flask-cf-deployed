@@ -1,4 +1,8 @@
-on: push
+on: 
+  workflow_run:
+    workflows: ["Deploy"]
+    types:
+      - completed
 name: Slack Notification Demo
 jobs:
   slackNotification:
@@ -13,7 +17,7 @@ jobs:
         SLACK_MSG_AUTHOR: ${{ secrets.SLACK_MSG_AUTHOR }}
         SLACK_COLOR: ${{ job.status }}
         SLACK_ICON: ${{ secrets.SLACK_ICON}}
-        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_MESSAGE: ${{ github.event.head_commit.message }}
         SLACK_TITLE: ${{ secrets.SLACK_TITLE}}
         SLACK_USERNAME: devBot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
