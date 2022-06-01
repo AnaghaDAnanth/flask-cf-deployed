@@ -20,7 +20,7 @@ pipeline {
                 //bat 'pip install --default-timeout=100 scikit-learn'
                 bat 'pip install --default-timeout=100 regex'
                 bat 'pip install --default-timeout=100 joblib'
-                bat 'pip install --default-timeout=100 nltk'
+                bat 'pip install --default-timeout=100 --user nltk'
                 bat 'pip install flask'
                 bat 'python -m pytest --junitxml results.xml test_routes.py'
                 
