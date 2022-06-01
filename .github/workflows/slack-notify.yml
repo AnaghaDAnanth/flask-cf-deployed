@@ -10,7 +10,8 @@ jobs:
   getCommitMsg:
     runs-on: ubuntu-latest
     steps:
-      - name: CommitMsg
+      - name: Commit Message
+        id: 'deploy-message'
         run: |
                 echo "::set-output name=commit_msg::$(git log -1 --format=%B)"
                 echo "::set-output name=commit_sha::$(git log -1 --format=%H)"
@@ -29,5 +30,5 @@ jobs:
         SLACK_ICON: ${{ secrets.SLACK_ICON}}
         SLACK_TITLE: ${{ secrets.SLACK_TITLE}}
         SLACK_USERNAME: devBot
-        SLACK_MESSAGE: ${{ steps.CommitMsg.outputs.commit_msg }}
+        SLACK_MESSAGE: ${{ steps.deploy-message.outputs.commit_msg }}
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
