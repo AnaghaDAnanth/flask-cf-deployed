@@ -17,7 +17,6 @@ jobs:
         SLACK_MSG_AUTHOR: ${{ github.actor }}
         SLACK_COLOR: ${{ job.status }}
         SLACK_ICON: ${{ secrets.SLACK_ICON}}
-        SLACK_MESSAGE: $(git log --format=%B -n 1 ${{github.event.after}})
         SLACK_TITLE: ${{ secrets.SLACK_TITLE}}
         SLACK_USERNAME: devBot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
