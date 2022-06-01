@@ -17,10 +17,10 @@ pipeline {
                 //bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 //bat 'pytest --junitxml results.xml test_app.py'
                 
-                bat 'pip install scikit-learn==0.24.2'
-                bat 'pip install regex'
-                bat 'pip install joblib'
-                bat 'pip install nltk'
+                bat 'pip install --default-timeout=100 scikit-learn==0.24.2'
+                bat 'pip install --default-timeout=100 regex'
+                bat 'pip install --default-timeout=100 joblib'
+                bat 'pip install --default-timeout=100 nltk'
                 bat 'pip install flask'
                 bat 'python -m pytest --junitxml results.xml test_routes.py'
                 
