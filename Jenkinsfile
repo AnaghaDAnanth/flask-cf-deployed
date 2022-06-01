@@ -11,21 +11,16 @@ pipeline {
         }
         
         
-        stage('Publish') {
-            steps {
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'anagha-creds', usernameVariable: 'AnaghaDAnanth', passwordVariable: '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']]) {                   
-                    
-                    bat('git push https://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@github.com/AnaghaDAnanth/flask-cf-deployed.git HEAD:refs/heads/main --tags -f --no-verify')
-                }
-            }
-        }
-
         stage("Py Test") {
             steps{
                 
                 //bat('PYENV_HOME=$WORKSPACE/.pyenv/virtualenv --no-site-packages $PYENV_HOME source $PYENV_HOME/bin/activate pip install -U pytest pip install -r requirements.txt py.test test_app.py deactivate')
                 //bat 'pytest --junitxml results.xml test_app.py'
                 
+                bat 'pip install scikit-learn==0.24.2'
+                bat 'pip install regex'
+                bat 'pip install joblib'
+                bat 'pip install nltk'
                 bat 'pip install flask'
                 bat 'python -m pytest --junitxml results.xml test_routes.py'
                 
@@ -35,29 +30,6 @@ pipeline {
                 //bat 'py.test test_app.py'
             }
         }
-        
-//         stage('Python pytest Tests') {
-//             steps{
-                
-//                 bat 'pip install -r requirements.txt'
-//                 bat 'pytest --junit-xml=test_results.xml test || true'
-//                 junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
-//             }
-//         }
-        
-        
-//         stage("Selenium Test") {
-//             steps{
-//                   bat 'python -m py_compile Selenium.py'
-//             }
-            
-//              post {
-//         always {
-        
-//             junit 'build/reports/**/*.xml'
-//         }
-//     }
-//         }
 
         stage('SonarQube analysis') {
 
@@ -67,6 +39,16 @@ pipeline {
                 }
                 withSonarQubeEnv('Sonarqube') {
                     bat "${scannerHome}/bin/sonar-scanner.bat" 
+                }
+            }
+            
+         }
+        
+        stage('Publish') {
+            steps {
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'anagha-creds', usernameVariable: 'AnaghaDAnanth', passwordVariable: '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']]) {                   
+                    
+                    bat('git push https://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@github.com/AnaghaDAnanth/flask-cf-deployed.git HEAD:refs/heads/main --tags -f --no-verify')
                 }
             }
         }
