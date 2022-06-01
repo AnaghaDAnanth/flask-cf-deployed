@@ -29,3 +29,6 @@ Integrating SonarQube with Jenkins
 https://www.youtube.com/watch?v=Spzk1lrCgNY
 https://www.youtube.com/watch?v=wn9wWYAShag
 
+Integrating Slack with git-hub actions
+Slack will be showing the status 
+
