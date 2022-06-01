@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request
 import nltk
-from sklearn.feature_extraction.text import CountVectorizer
+# from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem.porter import PorterStemmer
 import joblib
 import re
