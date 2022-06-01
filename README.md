@@ -27,5 +27,3 @@ Integrating SonarQube with Jenkins
 https://www.youtube.com/watch?v=Spzk1lrCgNY
 https://www.youtube.com/watch?v=wn9wWYAShag
 
-
-Editted the Readme file
