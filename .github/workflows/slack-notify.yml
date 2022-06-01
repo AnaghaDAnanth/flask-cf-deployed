@@ -1,0 +1,22 @@
+on: 
+  workflow_run:
+    workflows: ["Deploy"]
+    types:
+      - completed
+name: Slack Notification GitHub Action
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        SLACK_MSG_AUTHOR: ${{ github.actor }}
+        SLACK_COLOR: ${{ job.status }}
+        SLACK_ICON: ${{ secrets.SLACK_ICON}}
+        SLACK_TITLE: ${{ secrets.SLACK_TITLE}}
+        SLACK_USERNAME: devBot
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
