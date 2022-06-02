@@ -102,7 +102,7 @@ Initially, a Jenkins pipeline is trigerred on changes being pushed to the repo. 
 ## Contributors
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
 - Anagha D Ananth 
-- Archana Shastry
+- Archana
 - Natasha Sheelvant
 - Neha Thipse 
 
