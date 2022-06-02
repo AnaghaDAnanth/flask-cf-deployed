@@ -69,8 +69,9 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 The following are the tools and technologies that have been used to complete this project - 
-![image description](images/MicrosoftTeams-image (2).png)
-![My Image](images/MicrosoftTeams-image (2).png)
+<div align="center">
+  <img alt="DevOps Tools" src="https://github.com/AnaghaDAnanth/flask-cf-deployed/blob/main/images/image.png" width="200px" />
+</div>
 
 * [Slack Workstreams](https://nextjs.org/)
 * [GitHub](https://nextjs.org/)
