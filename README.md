@@ -60,8 +60,6 @@
 
 This is a basic sentiment analysis project built for predicting the sentiment of restaurant reviews. It uses an SVM model that is built using Python's scikit-learn and nltk libraries. The model has been saved and stored in the Models folder inroot directory. A CI/CD pipeline has been built to integrate multiple DevOps project to create an end-to-end flow of the working, deployed application.
 
-Use the `BLANK_README.md` to get started.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
