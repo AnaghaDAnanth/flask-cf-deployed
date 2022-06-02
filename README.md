@@ -20,7 +20,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">DevOps Project G01</h3>
+  <h2 align="center">DevOps Project G01</h2>
 
   <p align="center">
     A sentiment analysis project that has been implemented using Python, nltk and integrated with a CI/CD pipeline.
