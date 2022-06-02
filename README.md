@@ -70,7 +70,7 @@ Use the `BLANK_README.md` to get started.
 
 The following are the tools and technologies that have been used to complete this project - 
 <div align="center">
-  <img alt="DevOps Tools" src="https://github.com/AnaghaDAnanth/flask-cf-deployed/blob/main/images/image.png" width="200px" />
+  <img alt="DevOps Tools" src="https://github.com/AnaghaDAnanth/flask-cf-deployed/blob/main/images/image.png" width="650px" />
 </div>
 
 * [Slack Workstreams](https://nextjs.org/)
