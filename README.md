@@ -68,7 +68,7 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 The following are the tools and technologies that have been used to complete this project - 
-
+![image description](images/MicrosoftTeams-image (2).png)
 ![My Image](images/MicrosoftTeams-image (2).png)
 
 * [Slack Workstreams](https://nextjs.org/)
