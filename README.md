@@ -38,7 +38,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-using">Built Using</a></li>
       </ul>
     </li>
     <li>
@@ -64,7 +64,7 @@ This is a basic sentiment analysis project built for predicting the sentiment of
 
 
 
-### Built With
+### Built Using
 
 The following are the tools and technologies that have been used to complete this project - 
 <div align="center">
@@ -92,11 +92,11 @@ The following are the tools and technologies that have been used to complete thi
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This project uses a simple CI/CD flow o demostrate the working and integration of various tools.
+To run this project, make sure the public IP provided by ngrok is active. If so, trigger the Jenkins build by making a change in the repo.  
 
 ### Basic Workflow
 
-Initially, a Jenkins pipeline is trigerred on changes being pushed to the repo. When the Jenkins pipeline is successfully completed, it pushes the changes to the repo and GitHub actions triggers the deployment. A ‘main.yml’ file is defined, where we have written scripts to perform different jobs for deployment.
+Initially, a Jenkins pipeline is trigerred on changes being pushed to the repo. After the successful completion of the pipeline, new changes are pushed to the repo and GitHub actions triggers the deployment. A ‘main.yml’ file is defined, where scripts have been written to perform different jobs (Check, Deploy and Notify) for deployment.
   
 <!-- AUTHORS -->
 ## Contributors
