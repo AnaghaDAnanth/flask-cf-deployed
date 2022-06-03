@@ -71,18 +71,18 @@ The following are the tools and technologies that have been used to complete thi
   <img alt="DevOps Tools" src="https://github.com/AnaghaDAnanth/flask-cf-deployed/blob/main/images/image.png" width="700px" />
 </div>
 
-* [Slack Workstreams](https://nextjs.org/)
-* [GitHub](https://nextjs.org/)
-* [Python](https://reactjs.org/)
-* [Flask](https://vuejs.org/)
-* [Cloud Foundry](https://angular.io/)
-* [BTP](https://svelte.dev/)
-* [Jenkins](https://laravel.com)
-* [PyTest](https://getbootstrap.com)
-* [SonarQube](https://jquery.com)
-* [GitHub Actions](https://laravel.com)
-* [NgRok](https://getbootstrap.com)
-* [GitHub WebHooks](https://jquery.com)
+* [Slack Workstreams](https://workstreams.ai/slack.html?gclid=CjwKCAjwv-GUBhAzEiwASUMm4omTFkoEuciFBjWUa34t0q-d5ux3H1IfXyyaDZi6nqahWE37afFaTxoC6BQQAvD_BwE)
+* [GitHub](https://github.com/)
+* [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+* [Cloud Foundry](https://www.cloudfoundry.org/)
+* [BTP](https://www.sap.com/india/products/business-technology-platform.html)
+* [Jenkins](https://www.jenkins.io/)
+* [PyTest](https://docs.pytest.org/en/7.1.x/)
+* [SonarQube](https://www.sonarqube.org/)
+* [GitHub Actions](https://github.com/features/actions?utm_source=google&utm_medium=ppc&utm_campaign=2022q3-adv-WW-Google_Search-eg_brand&scid=7013o000002CdxYAAS&gclid=CjwKCAjwv-GUBhAzEiwASUMm4nXvdPw803qtqCPz7APeTtXLoWWSA29axZVQwtuNtvwG7Zbfa6jfxBoCBQ4QAvD_BwE)
+* [NgRok](https://ngrok.com/)
+* [GitHub WebHooks](https://docs.github.com/en/developers/webhooks-and-events/webhooks/about-webhooks)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
