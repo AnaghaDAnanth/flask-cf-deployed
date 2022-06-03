@@ -92,7 +92,7 @@ The following are the tools and technologies that have been used to complete thi
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To run this project, make sure the public IP provided by ngrok is active. If so, trigger the Jenkins build by making a change in the repo.  
+To run this project, make sure the public IP provided by ngrok is active. If so, trigger the Jenkins build by making a change in the repo. Once the build has completed and the app has been deployed, use [this link](https://apppy-happy-antelope-yr.cfapps.eu10.hana.ondemand.com/sentimentAnalysis) to navigate to the application.
 
 ### Basic Workflow
 
