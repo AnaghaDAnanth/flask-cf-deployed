@@ -42,7 +42,7 @@ def test_helloada_route():
     response = client.get(url)
     assert response.status_code == 200  
     
- def test_helloanagha_route():
+def test_helloanagha_route():
     app = Flask(__name__)
     configure_routes(app)
     client = app.test_client()
