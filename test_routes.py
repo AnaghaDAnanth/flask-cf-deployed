@@ -23,12 +23,29 @@ def test_sentiment_analysis_route():
     assert response.status_code == 200
 
 
-def test_sentiment_post_req():
+# def test_sentiment_post_req():
+#     app = Flask(__name__)
+#     configure_routes(app)
+#     client = app.test_client()
+#     response = client.post("/sentimentAnalysis", data={
+#         "name": "neha Thipse",
+#         "review": "Good food",        
+#     })
+#     assert response.status_code == 200
+
+
+def test_helloada_route():
     app = Flask(__name__)
     configure_routes(app)
     client = app.test_client()
-    response = client.post("/sentimentAnalysis", data={
-        "name": "neha Thipse",
-        "review": "Good food",        
-    })
+    url = '/hello/ada'
+    response = client.get(url)
+    assert response.status_code == 200  
+    
+ def test_helloanagha_route():
+    app = Flask(__name__)
+    configure_routes(app)
+    client = app.test_client()
+    url = '/hello/anagha'
+    response = client.get(url)
     assert response.status_code == 200
