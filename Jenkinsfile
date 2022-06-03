@@ -35,7 +35,7 @@ pipeline {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'anagha-creds', usernameVariable: 'AnaghaDAnanth', passwordVariable: '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']]) {                   
                     bat('git add .')
-                    bat('git commit -m "Pushed from Jenkins - Build $BUILD_NUMBER"')
+                    bat('git commit -m "Pushed from Jenkins - Build \${BUILD_NUMBER}"')
                     //bat('git commit -m "Pushed from Jenkins"')
                     bat('git push https://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@github.com/AnaghaDAnanth/flask-cf-deployed.git HEAD:refs/heads/test-deployment --tags -f --no-verify')
                 }
