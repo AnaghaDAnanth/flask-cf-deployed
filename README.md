@@ -48,7 +48,7 @@
       </ul>
     </li>
     <li>
-      <a href="#authors">Contributors</a>
+      <a href="#contributors">Contributors</a>
     </li>
   </ol>
 </details>
@@ -98,7 +98,7 @@ To run this project, make sure the public IP provided by ngrok is active. If so,
 
 Initially, a Jenkins pipeline is trigerred on changes being pushed to the repo. After the successful completion of the pipeline, new changes are pushed to the repo and GitHub actions triggers the deployment. A ‘main.yml’ file is defined, where scripts have been written to perform different jobs (Check, Deploy and Notify) for deployment.
   
-<!-- AUTHORS -->
+<!-- CONTRIBUTORS -->
 ## Contributors
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
 - Anagha D Ananth 
