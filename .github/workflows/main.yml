@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print a value
-        run: echo Hello from first job 
+        run: echo This is a test. First job has successfully run! 
 
   deploy:
     runs-on: ubuntu-latest
